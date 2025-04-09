@@ -275,3 +275,126 @@ if add_more == 'yes':
 print("\nAll Student Details:")
 for student in students:
     print(f"Name: {student['name']}, Age: {student['age']}, Marks: {student['marks']}")
+
+# S E T S  T A S K
+print("\nS E T S  T A S K")
+
+# Add items in set
+my_set = set()
+my_set.add("AI")
+my_set.add("ML")
+print("After adding items:", my_set)
+
+# Add Any Iterable
+my_set.update(["DL", "NLP", "CV"])
+print("After adding iterable:", my_set)
+
+# Add and join two sets
+set1 = {"AI", "ML"}
+set2 = {"DL", "NLP"}
+joined_set = set1.union(set2)
+print("Joined Set:", joined_set)
+
+# Remove items
+my_set.remove("CV")
+print("After remove():", my_set)
+my_set.discard("DL")
+print("After discard():", my_set)
+my_set.pop()
+print("After pop():", my_set)
+my_set.clear()
+print("After clear():", my_set)
+
+# del will delete the set completely
+sample_set = {1, 2, 3}
+del sample_set
+
+# Join two sets using union and update method
+a = {1, 2, 3}
+b = {3, 4, 5}
+print("Union:", a.union(b))
+a.update(b)
+print("After update():", a)
+
+# Intersection & Difference
+x = {1, 2, 3, 4}
+y = {3, 4, 5, 6}
+print("Intersection:", x.intersection(y))
+print("Difference:", x.difference(y))
+
+# Completed and Upcoming Courses
+completed_courses = {"ML", "NLP", "CV"}
+upcoming_courses = {"DIP", "RL", "CV"}
+unique_courses = completed_courses - upcoming_courses
+print("Unique Completed Courses:", unique_courses)
+
+# Integers sets program
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+print("Union:", set_a | set_b)
+print("Intersection:", set_a & set_b)
+print("Difference:", set_a - set_b)
+
+set_a.add(7)
+print("After adding 7 to set_a:", set_a)
+set_b.remove(5)
+print("After removing 5 from set_b:", set_b)
+print("Is set_b subset of set_a?", set_b.issubset(set_a))
+
+
+# C O N D I T I O N A L S  T A S K
+print("\nC O N D I T I O N A L S  T A S K")
+
+num = int(input("Enter a number: "))
+
+# Positive number
+if num > 0:
+    print("Number is Positive")
+
+# Negative number
+if num < 0:
+    print("Number is Negative")
+
+# Greater than comparison
+a = 10
+b = 5
+if a > b:
+    print("a is greater than b")
+
+# Lesser than comparison
+if b < a:
+    print("b is lesser than a")
+
+# Greater and Lesser using if-else
+if a > b:
+    print("a is greater")
+else:
+    print("b is greater")
+
+# Positive or Negative using if-else
+if num >= 0:
+    print("Positive number")
+else:
+    print("Negative number")
+
+# Grade Classification
+grade = int(input("Enter student's grade: "))
+if grade > 90:
+    print("Excellent")
+elif 80 < grade <= 90:
+    print("Good")
+elif 70 < grade <= 80:
+    print("Average")
+else:
+    print("Needs Improvement")
+
+# AI Concept Suggestion
+interest = input("Enter your area of interest (data/image/text): ").lower()
+if interest == "data":
+    print("Study Machine Learning")
+elif interest == "image":
+    print("Study Computer Vision")
+elif interest == "text":
+    print("Study Natural Language Processing")
+else:
+    print("Explore more AI fields!")

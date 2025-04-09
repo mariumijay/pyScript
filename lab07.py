@@ -1,11 +1,16 @@
-"""
+
 #tuple
 emptyTuple=()
 print(emptyTuple)
 
-#Access Tuple Items
+# Tuple with multiple elements
+my_tuple = (1, 2, 3, "hello", 4.5)
 
-# print last dig it
+# Single element tuple (comma zaroori hai)
+single_element_tuple = (5,)  
+
+
+# print digit
 t = (10, 20, 30, 40, 50)
 print(t[0])  # Output: 10
 print(t[2])  # Output: 30
@@ -15,27 +20,53 @@ print(t[2])  # Output: 30
 
 print(t[-1])
 
-#ADD ITEM
-# 01 Convert Into A List
+#02 
 
-t=("apple","Mango","Banana")
-print(t)
-#02
+#ADD Item
+# Original tuple
+my_tuple = (1, 2, 3)
+
+# Tuple ko list mein convert karna
+temp_list = list(my_tuple)
+
+# List mein naya item add karna
+temp_list.append(4)
+
+# Wapas tuple mein convert karna
+my_tuple = tuple(temp_list)
+
+print(my_tuple)  # Output: (1, 2, 3, 4)
+
+
+
 
 #03
+t = ("apple", "Mango", "Banana")  # Original tuple
+y = list(t)  # Convert tuple to list
+y.remove("Banana")  # Remove item
+t = tuple(y)  # Convert back to tuple
+print(t)  # Output: ('apple', 'Mango')
 
-#Remove Items
-t=("apple","Mango","Banana")
-y=list(t)
-y.remove("Banana")
-#t=tuple(y)
-print(t)
+#04
+#range slicing
 
-#range
+t = (10, 20, 30, 40, 50, 60, 70)
 
-t = tuple(range(1, 11))  # Creates a tuple (1, 2, 3, ..., 10)
-print(t)
-"""
+# Index 1 se 4 tak (4 included nahi hoga)
+print(t[1:4])  # Output: (20, 30, 40)
+
+# Start se index 3 tak
+print(t[:3])   # Output: (10, 20, 30)
+
+# Index 2 se end tak
+print(t[2:])   # Output: (30, 40, 50, 60, 70)
+
+# Last ke 3 elements
+print(t[-3:])  # Output: (50, 60, 70)
+
+# Step size ka use (har dusra element)
+print(t[::2])  # Output: (10, 30, 50, 70)
+
 
 #DICTIONERY
 
@@ -107,7 +138,7 @@ print(s)  # Output: {1, 2, 4, 5}
 s.discard(4)
 print(s)  # Output: {1, 2, 5}
 
-s.discard(10)  # ✅ No error
+s.discard(10)  #  No error
 
 #pop() (Random element remove karega)
 
